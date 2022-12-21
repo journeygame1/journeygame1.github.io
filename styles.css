@@ -1,0 +1,461 @@
+/* nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #212529;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 100000;
+}
+nav .logo {
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: beige;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: rgb(252, 217, 175);
+  text-decoration: underline rgb(201, 201, 201) 1px;
+  transition: 2s;
+  letter-spacing: 2px;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    z-index: 1000000;
+    top: 80px;
+    left: -100%;
+    background: #212529;
+    height: 100vh;
+    width: 70%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: rgb(252, 217, 175);
+    text-decoration: underline rgb(201, 201, 201) 1px;
+    transition: 2s;
+    letter-spacing: 2px;
+  }
+} */
+
+/* author: Kadir Ulge */
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* General Structure */
+
+body {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  color: bisque;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  cursor: url(images/pointer.png), auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.slogan:hover {
+  cursor: url(images/heart.png), auto;
+}
+
+/* Navbar Section */
+
+.logo img {
+  width: 35px;
+  margin-bottom: 5px;
+}
+
+.menu_bar {
+  height: 80px;
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  color: beige;
+}
+
+.link a:hover {
+  color: rgb(252, 217, 175);
+  text-decoration: underline rgb(201, 201, 201) 1px;
+  transition: 2s;
+  letter-spacing: 2px;
+}
+
+.link a {
+  color: beige;
+  font-size: 1.2rem;
+  text-decoration: underline rgb(201, 201, 201, 0) 1px;
+  transition: 1s;
+  margin: 20px;
+}
+
+.link a.active {
+  color: rgb(252, 217, 175);
+  text-decoration: underline rgb(201, 201, 201) 1px;
+  letter-spacing: 2px;
+}
+
+nav p {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}
+
+.menu a {
+  color: rgb(122, 118, 113);
+  font-size: 1.2rem;
+}
+
+.menu a:hover {
+  color: bisque;
+  transition: 0.5s;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.5);
+}
+
+.menu .fa-solid {
+  display: none;
+}
+
+/* Intro Section */
+
+.intro-container {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Tech section */
+.tech-container {
+  margin-top: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tech {
+  margin-top: 50px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.tech img {
+  border-radius: 8%;
+}
+.tech img:hover {
+  opacity: 0.9;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+.poster-image img {
+  border-radius: 2%;
+  width: 60vw;
+}
+.arrow {
+  justify-content: center;
+  text-align: center;
+}
+
+.arrow img {
+  margin-top: 140px;
+  margin-bottom: 80px;
+  width: 300px;
+  height: 200px;
+}
+
+/* Hobby section */
+
+.hobby-container {
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.hobby {
+  width: 30%;
+  margin-top: 100px;
+  color: rgb(209, 182, 148);
+}
+
+.hobby-image img {
+  width: 10vw;
+  /* margin-right: 8rem; */
+  /* justify-content: center;
+  text-align: center; */
+}
+
+.tech-image {
+  width: 40vw;
+}
+
+/* Slogan Section */
+
+.slogan {
+  justify-content: space-around;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  text-align: center;
+}
+
+.slogan img {
+  height: 100px;
+  width: 400px;
+}
+
+.slogan i {
+  color: rgb(226, 123, 123);
+}
+
+.slogan i:hover {
+  color: rgb(212, 100, 100);
+}
+
+/* Experince Section */
+.experience button:hover {
+  cursor: url(images/pointer.png), auto;
+}
+
+.experience h2 {
+  color: rgb(197, 235, 208);
+}
+
+.card1 {
+  background-color: rgb(218, 219, 168);
+  color: rgb(37, 37, 37);
+  border-radius: 8%;
+}
+
+.card1:hover {
+  font-size: larger;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.5);
+}
+
+.card2 {
+  background-color: rgb(255, 197, 168);
+  color: rgb(37, 37, 37);
+  border-radius: 8%;
+}
+
+.card2:hover {
+  font-size: larger;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.5);
+}
+
+.card3 {
+  background-color: rgb(177, 106, 93);
+  color: rgb(37, 37, 37);
+  border-radius: 8%;
+}
+
+.card3:hover {
+  font-size: larger;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.5);
+}
+
+.row {
+  width: 70%;
+}
+
+/* Footer Section */
+
+.contact-me {
+  margin-top: 15%;
+}
+
+.btn-contact {
+  box-shadow: 0px 0px 50px 20px #1c1b18;
+  background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+  background-color: #eae0c2;
+  border-radius: 42px;
+  display: inline-block;
+  cursor: pointer;
+  color: #505739;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #ffffff;
+}
+
+.btn-contact:hover {
+  background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+  background-color: #ccc2a6;
+  color: #000000;
+}
+
+.btn-contact:active {
+  position: relative;
+  top: 1px;
+}
+
+.go-up img {
+  height: 100px;
+  width: 100px;
+}
+
+.footer-container {
+  display: inline-block;
+  margin-left: 90%;
+  margin-bottom: 1%;
+  margin-top: 10%;
+}
+.copyright {
+  position: absolute;
+  z-index: -1;
+  margin-left: 38%;
+  margin-top: 10%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* For mobile view */
+
+@media only screen and (max-width: 763px) {
+  .hobby {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .intro-container {
+    display: inline-block;
+  }
+  .intro-image {
+    margin-left: 15%;
+  }
+  .tech-container {
+    margin-top: 150px;
+  }
+  .tech-image {
+    display: none;
+  }
+  .hobby-container {
+    display: inline-block;
+  }
+  .hobby-image {
+    margin-left: 15%;
+  }
+  .menu .fa-solid {
+    display: block;
+    margin-top: 100%;
+    font-size: larger;
+  }
+  .menu_bar {
+    justify-content: space-between;
+  }
+  .menu_bar .logo {
+    margin-left: 8%;
+  }
+  .menu_bar .menu {
+    margin-right: 8%;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  .arrow {
+    display: inline;
+  }
+}
